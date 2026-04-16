@@ -5,20 +5,14 @@ import "./styles.css";
 
 export function PreviewApp() {
   return (
-    <main
-      style={{
-        display: "grid",
-        gap: "16px",
-        maxWidth: "420px",
-        margin: "64px auto",
-        padding: "0 16px"
-      }}
-    >
-      <h1 style={{ margin: 0 }}>Lisanne UI Preview</h1>
-      <p style={{ margin: 0, color: "#344054" }}>
-        Use this page to quickly test components during development.
+    <main className="preview-shell">
+      <p className="preview-eyebrow">Lisanne UI / Issue 001</p>
+      <h1 className="preview-title">Bold, editorial components for modern products.</h1>
+      <p className="preview-copy">
+        This is your design system sandbox. Use it to quickly shape component
+        tone, visual hierarchy, and interaction details before publishing.
       </p>
-      <div style={{ display: "flex", gap: "12px" }}>
+      <div className="preview-actions">
         <Button>Primary</Button>
         <Button variant="secondary">Secondary</Button>
       </div>
