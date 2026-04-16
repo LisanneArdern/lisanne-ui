@@ -1,0 +1,38 @@
+.lsn-badge {
+  display: inline-flex;
+  align-items: center;
+  border: var(--lsn-border-default) solid transparent;
+  border-radius: var(--lsn-radius-none);
+  font-size: 14px;
+  font-weight: var(--lsn-font-bold);
+  letter-spacing: var(--lsn-letter-label);
+  line-height: 1;
+  padding: 0.48em 0.68em;
+  text-transform: uppercase;
+  font-family: "Inter Tight", "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+.lsn-badge--new {
+  background: #121212;
+  color: #f4f4f0;
+}
+
+.lsn-badge--beta {
+  border-color: #1e1e1e;
+  color: #1e1e1e;
+}
+
+.lsn-badge--live {
+  background: #dce5d3;
+  color: #2b6b2d;
+}
+
+.lsn-badge--deprecated {
+  background: #e5dfe0;
+  color: #87352e;
+}
+
+.lsn-badge--draft {
+  background: #e4ddcf;
+  color: #6f5a1f;
+}
