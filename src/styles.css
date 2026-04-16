@@ -49,10 +49,49 @@ body {
 
 .preview-shell {
   display: grid;
-  gap: 22px;
+  gap: 56px;
   max-width: 720px;
   margin: 60px auto;
   padding: 0 24px 56px;
+}
+
+.preview-intro {
+  display: grid;
+  gap: 22px;
+}
+
+.preview-section {
+  display: grid;
+  gap: 20px;
+  border-top: var(--lsn-border-default) solid var(--lsn-color-foreground);
+  padding-top: 20px;
+}
+
+.preview-section__header {
+  display: grid;
+  gap: 6px;
+}
+
+.preview-section__eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: var(--lsn-font-bold);
+  letter-spacing: var(--lsn-letter-label);
+  text-transform: uppercase;
+  color: var(--lsn-color-foreground-muted);
+}
+
+.preview-section__title {
+  margin: 0;
+  font-size: clamp(22px, 3vw, 28px);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.preview-section__body {
+  display: grid;
+  gap: 16px;
 }
 
 .preview-eyebrow {
