@@ -13,10 +13,10 @@
 .lsn-input {
   width: 100%;
   min-height: 42px;
-  border: var(--lsn-border-default) solid #121212;
+  border: var(--lsn-border-default) solid var(--lsn-color-foreground);
   border-radius: var(--lsn-radius-none);
   background: transparent;
-  color: #121212;
+  color: var(--lsn-color-foreground);
   font: inherit;
   font-size: 14px;
   line-height: 1.2;
@@ -24,30 +24,31 @@
 }
 
 .lsn-input::placeholder {
-  color: #5a5a5a;
+  color: var(--lsn-color-foreground-muted);
 }
 
 .lsn-input:focus-visible {
-  outline: 2px solid #121212;
+  outline: 2px solid var(--lsn-color-foreground);
   outline-offset: 2px;
 }
 
 .lsn-input--error {
-  border-color: #87352e;
+  border-color: var(--lsn-color-feedback-error);
 }
 
-.lsn-field__helper,
-.lsn-field__error {
+.lsn-field__helper {
   margin: 0;
   font-size: 12px;
   letter-spacing: var(--lsn-letter-label);
   text-transform: uppercase;
+  color: var(--lsn-color-foreground-muted);
 }
 
-.lsn-field__helper {
-  color: #3b3b3b;
-}
-
+/* Intentionally sentence-case and lighter — error copy should feel
+   considered, not shouted. Keeps the semantic red color for clarity. */
 .lsn-field__error {
-  color: #87352e;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--lsn-color-feedback-error);
 }

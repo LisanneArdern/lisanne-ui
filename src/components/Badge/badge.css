@@ -13,26 +13,29 @@
 }
 
 .lsn-badge--new {
-  background: #121212;
-  color: #f4f4f0;
+  background: var(--lsn-color-foreground);
+  color: var(--lsn-color-foreground-on-inverted);
 }
 
 .lsn-badge--beta {
-  border-color: #1e1e1e;
-  color: #1e1e1e;
+  border-color: var(--lsn-color-foreground);
+  color: var(--lsn-color-foreground);
 }
 
 .lsn-badge--live {
-  background: #dce5d3;
-  color: #2b6b2d;
+  background: var(--lsn-color-semantic-live-bg);
+  border-color: var(--lsn-color-semantic-live-fg);
+  color: var(--lsn-color-semantic-live-fg);
 }
 
 .lsn-badge--deprecated {
-  background: #e5dfe0;
-  color: #87352e;
+  background: var(--lsn-color-semantic-deprecated-bg);
+  border-color: var(--lsn-color-semantic-deprecated-fg);
+  color: var(--lsn-color-semantic-deprecated-fg);
 }
 
 .lsn-badge--draft {
-  background: #e4ddcf;
-  color: #6f5a1f;
+  background: var(--lsn-color-semantic-draft-bg);
+  border-color: var(--lsn-color-semantic-draft-fg);
+  color: var(--lsn-color-semantic-draft-fg);
 }

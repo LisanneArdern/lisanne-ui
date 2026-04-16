@@ -1,7 +1,8 @@
 :root {
   font-family: "Inter Tight", "Avenir Next", Avenir, "Segoe UI", sans-serif;
-  color: #121212;
-  background-color: #f2eee6;
+  color: var(--lsn-color-foreground);
+  background-color: var(--lsn-color-background-page);
+
   --lsn-border-default: 1.5px;
   --lsn-border-soft: 0.5px;
   --lsn-letter-label: 0.1em;
@@ -10,6 +11,23 @@
   --lsn-font-bold: 500;
   --lsn-radius-none: 0px;
   --lsn-radius-card: 0px;
+
+  --lsn-color-background-page: #f2eee6;
+  --lsn-color-background-surface: #ffffff;
+  --lsn-color-background-inverted: #121212;
+
+  --lsn-color-foreground: #121212;
+  --lsn-color-foreground-muted: #3b3b3b;
+  --lsn-color-foreground-on-inverted: #f4f4f0;
+
+  --lsn-color-semantic-live-bg: #dce5d3;
+  --lsn-color-semantic-live-fg: #2b6b2d;
+  --lsn-color-semantic-deprecated-bg: #e9d7d5;
+  --lsn-color-semantic-deprecated-fg: #87352e;
+  --lsn-color-semantic-draft-bg: #e4ddcf;
+  --lsn-color-semantic-draft-fg: #6f5a1f;
+
+  --lsn-color-feedback-error: #87352e;
 }
 
 * {
@@ -22,7 +40,7 @@ body {
   background:
     linear-gradient(90deg, transparent 49px, rgba(0, 0, 0, 0.04) 50px) 0 0 /
       50px 50px,
-    #f2eee6;
+    var(--lsn-color-background-page);
 }
 
 #root {
@@ -75,15 +93,15 @@ body {
 }
 
 .preview-card {
-  border: var(--lsn-border-default) solid #121212;
+  border: var(--lsn-border-default) solid var(--lsn-color-foreground);
   border-radius: var(--lsn-radius-card);
   padding: 16px;
   background: transparent;
 }
 
 .preview-card--inverted {
-  background: #121212;
-  color: #f4f4f0;
+  background: var(--lsn-color-background-inverted);
+  color: var(--lsn-color-foreground-on-inverted);
 }
 
 .preview-label {
@@ -92,16 +110,4 @@ body {
   letter-spacing: var(--lsn-letter-label);
   font-size: 12px;
   font-weight: var(--lsn-font-bold);
-}
-
-.preview-input {
-  width: 100%;
-  min-height: 40px;
-  border: var(--lsn-border-default) solid currentColor;
-  border-radius: var(--lsn-radius-none);
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  font-size: 14px;
-  padding: 10px 12px;
 }
