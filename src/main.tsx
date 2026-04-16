@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Badge, Button, Input, Textarea } from "./components";
+import { Badge, Button, Card, Input, Textarea } from "./components";
 import { tokens } from "./tokens";
 import "./styles.css";
 
@@ -26,6 +26,21 @@ export function PreviewApp() {
         <Button>Primary</Button>
         <Button variant="secondary">Secondary</Button>
       </div>
+      <section className="preview-card-grid">
+        <Card
+          eyebrow="Project - 01"
+          title="Design system audit"
+          description="Rebuilt token architecture for a product team of 12."
+          tags={["React", "Figma"]}
+        />
+        <Card
+          variant="inverted"
+          eyebrow="Project - 02"
+          title="Component library"
+          description="Open source, bold editorial style. You're looking at it."
+          tags={["TS", "Storybook"]}
+        />
+      </section>
       <section className="preview-card-grid">
         <article className="preview-card">
           <Input
