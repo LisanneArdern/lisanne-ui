@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Badge, Button } from "./components";
+import { Badge, Button, Input, Textarea } from "./components";
 import { tokens } from "./tokens";
 import "./styles.css";
 
@@ -26,6 +26,22 @@ export function PreviewApp() {
         <Button>Primary</Button>
         <Button variant="secondary">Secondary</Button>
       </div>
+      <section className="preview-card-grid">
+        <article className="preview-card">
+          <Input
+            label="Email"
+            placeholder="Email address"
+            helperText="We'll never share your details."
+          />
+        </article>
+        <article className="preview-card">
+          <Textarea
+            label="Pitch"
+            placeholder="Share your editorial angle..."
+            error="Please provide at least 20 characters."
+          />
+        </article>
+      </section>
     </main>
   );
 }
