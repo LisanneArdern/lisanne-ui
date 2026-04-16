@@ -94,6 +94,11 @@ body {
   gap: 16px;
 }
 
+.preview-type-stack {
+  display: grid;
+  gap: 18px;
+}
+
 .preview-eyebrow {
   margin: 0;
   font-size: 12px;
