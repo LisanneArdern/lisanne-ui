@@ -1,4 +1,5 @@
 import { StrictMode, useState } from "react";
+import type { ReactNode } from "react";
 import { createRoot } from "react-dom/client";
 import {
   Badge,
@@ -12,34 +13,99 @@ import {
 import { tokens } from "./tokens";
 import "./styles.css";
 
+type PreviewSectionProps = {
+  eyebrow: string;
+  title: string;
+  children: ReactNode;
+};
+
+function PreviewSection({ eyebrow, title, children }: PreviewSectionProps) {
+  return (
+    <section className="preview-section">
+      <header className="preview-section__header">
+        <p className="preview-section__eyebrow">{eyebrow}</p>
+        <h2 className="preview-section__title">{title}</h2>
+      </header>
+      <div className="preview-section__body">{children}</div>
+    </section>
+  );
+}
+
 export function PreviewApp() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <main className="preview-shell">
-      <p className="preview-eyebrow">Lisanne UI / Issue 001</p>
-      <h1 className="preview-title">
-        Bold, editorial components for modern products.
-      </h1>
-      <p className="preview-copy">
-        This is your design system sandbox. Use it to quickly shape component
-        tone, visual hierarchy, and interaction details before publishing.
-      </p>
-      <div className="preview-actions">
-        <Badge>New</Badge>
-        <Badge variant="beta">Beta</Badge>
-        <Badge variant="live">Live</Badge>
-        <Badge variant="deprecated">Deprecated</Badge>
-        <Badge variant="draft">Draft</Badge>
-      </div>
-      <div className="preview-actions">
-        <Tooltip content="Opens publish flow">
-          <Button onClick={() => setModalOpen(true)}>Get started</Button>
-        </Tooltip>
-        <Tooltip content="Read the docs" placement="bottom">
+      <header className="preview-intro">
+        <p className="preview-eyebrow">Lisanne UI / Issue 001</p>
+        <h1 className="preview-title">
+          Bold, editorial components for modern products.
+        </h1>
+        <p className="preview-copy">
+          This is your design system sandbox. Use it to quickly shape component
+          tone, visual hierarchy, and interaction details before publishing.
+        </p>
+      </header>
+
+      <PreviewSection eyebrow="Section 01" title="Buttons">
+        <div className="preview-actions">
+          <Button>Get started</Button>
           <Button variant="secondary">Learn more</Button>
-        </Tooltip>
-      </div>
+        </div>
+      </PreviewSection>
+
+      <PreviewSection eyebrow="Section 02" title="Badges">
+        <div className="preview-actions">
+          <Badge>New</Badge>
+          <Badge variant="beta">Beta</Badge>
+          <Badge variant="live">Live</Badge>
+          <Badge variant="deprecated">Deprecated</Badge>
+          <Badge variant="draft">Draft</Badge>
+        </div>
+      </PreviewSection>
+
+      <PreviewSection eyebrow="Section 03" title="Inputs">
+        <div className="preview-card-grid">
+          <Input
+            label="Email"
+            placeholder="Email address"
+            helperText="We'll never share your details."
+          />
+          <Textarea
+            label="Pitch"
+            placeholder="Share your editorial angle..."
+            error="Please provide at least 20 characters so we can share helpful context."
+          />
+        </div>
+      </PreviewSection>
+
+      <PreviewSection eyebrow="Section 04" title="Card">
+        <div className="preview-card-grid">
+          <Card
+            eyebrow="Project - 01"
+            title="Design system audit"
+            description="Rebuilt token architecture for a product team of 12."
+            tags={["React", "Figma"]}
+          />
+          <Card
+            variant="inverted"
+            eyebrow="Project - 02"
+            title="Component library"
+            description="Open source, bold editorial style. You're looking at it."
+            tags={["TS", "Storybook"]}
+          />
+        </div>
+      </PreviewSection>
+
+      <PreviewSection eyebrow="Section 05" title="Overlays">
+        <div className="preview-actions">
+          <Button onClick={() => setModalOpen(true)}>Open modal</Button>
+          <Tooltip content="Read the docs" placement="top">
+            <Button variant="secondary">Hover for tooltip</Button>
+          </Tooltip>
+        </div>
+      </PreviewSection>
+
       <Modal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -47,10 +113,7 @@ export function PreviewApp() {
         description="Once published, the current draft goes live immediately to all readers."
         footer={
           <>
-            <Button
-              variant="secondary"
-              onClick={() => setModalOpen(false)}
-            >
+            <Button variant="secondary" onClick={() => setModalOpen(false)}>
               Cancel
             </Button>
             <Button onClick={() => setModalOpen(false)}>Publish</Button>
@@ -61,37 +124,6 @@ export function PreviewApp() {
           You can revert to the previous version from the archive at any time.
         </p>
       </Modal>
-      <section className="preview-card-grid">
-        <Card
-          eyebrow="Project - 01"
-          title="Design system audit"
-          description="Rebuilt token architecture for a product team of 12."
-          tags={["React", "Figma"]}
-        />
-        <Card
-          variant="inverted"
-          eyebrow="Project - 02"
-          title="Component library"
-          description="Open source, bold editorial style. You're looking at it."
-          tags={["TS", "Storybook"]}
-        />
-      </section>
-      <section className="preview-card-grid">
-        <article className="preview-card">
-          <Input
-            label="Email"
-            placeholder="Email address"
-            helperText="We'll never share your details."
-          />
-        </article>
-        <article className="preview-card">
-          <Textarea
-            label="Pitch"
-            placeholder="Share your editorial angle..."
-            error="Please provide at least 20 characters so we can share helpful context."
-          />
-        </article>
-      </section>
     </main>
   );
 }
