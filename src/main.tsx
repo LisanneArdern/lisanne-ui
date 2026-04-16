@@ -1,10 +1,12 @@
-import { StrictMode } from "react";
+import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { Badge, Button, Card, Input, Textarea } from "./components";
+import { Badge, Button, Card, Input, Modal, Textarea } from "./components";
 import { tokens } from "./tokens";
 import "./styles.css";
 
 export function PreviewApp() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <main className="preview-shell">
       <p className="preview-eyebrow">Lisanne UI / Issue 001</p>
@@ -23,9 +25,30 @@ export function PreviewApp() {
         <Badge variant="draft">Draft</Badge>
       </div>
       <div className="preview-actions">
-        <Button>Get started</Button>
+        <Button onClick={() => setModalOpen(true)}>Get started</Button>
         <Button variant="secondary">Learn more</Button>
       </div>
+      <Modal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        title="Publish this issue"
+        description="Once published, the current draft goes live immediately to all readers."
+        footer={
+          <>
+            <Button
+              variant="secondary"
+              onClick={() => setModalOpen(false)}
+            >
+              Cancel
+            </Button>
+            <Button onClick={() => setModalOpen(false)}>Publish</Button>
+          </>
+        }
+      >
+        <p style={{ margin: 0 }}>
+          You can revert to the previous version from the archive at any time.
+        </p>
+      </Modal>
       <section className="preview-card-grid">
         <Card
           eyebrow="Project - 01"
