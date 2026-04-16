@@ -1,6 +1,10 @@
 .lsn-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--lsn-border-default) solid var(--lsn-color-foreground);
   border-radius: var(--lsn-radius-none);
-  border: var(--lsn-border-default) solid #121212;
   cursor: pointer;
   font-size: 12px;
   font-weight: var(--lsn-font-bold);
@@ -9,7 +13,7 @@
   min-height: 42px;
   padding: 12px 18px;
   text-transform: uppercase;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .lsn-button:disabled {
@@ -17,28 +21,29 @@
   opacity: 0.45;
 }
 
+/* Flat by design. No shadows, no depth tricks.
+   High-contrast black/white is doing the work. */
 .lsn-button--primary {
-  background: #121212;
-  box-shadow: 4px 4px 0 #d9d0c1;
-  color: #f6f2ea;
+  background: var(--lsn-color-foreground);
+  color: var(--lsn-color-foreground-on-inverted);
 }
 
 .lsn-button--primary:hover:not(:disabled) {
-  box-shadow: 6px 6px 0 #c8bea9;
-  transform: translate(-1px, -1px);
+  background: transparent;
+  color: var(--lsn-color-foreground);
 }
 
 .lsn-button--secondary {
   background: transparent;
-  color: #121212;
+  color: var(--lsn-color-foreground);
 }
 
 .lsn-button--secondary:hover:not(:disabled) {
-  background: #121212;
-  color: #f6f2ea;
+  background: var(--lsn-color-foreground);
+  color: var(--lsn-color-foreground-on-inverted);
 }
 
 .lsn-button:focus-visible {
-  outline: 2px solid #121212;
+  outline: 2px solid var(--lsn-color-foreground);
   outline-offset: 2px;
 }

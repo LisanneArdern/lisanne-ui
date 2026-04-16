@@ -23,8 +23,8 @@ export function PreviewApp() {
         <Badge variant="draft">Draft</Badge>
       </div>
       <div className="preview-actions">
-        <Button>Primary</Button>
-        <Button variant="secondary">Secondary</Button>
+        <Button>Get started</Button>
+        <Button variant="secondary">Learn more</Button>
       </div>
       <section className="preview-card-grid">
         <Card
@@ -53,7 +53,7 @@ export function PreviewApp() {
           <Textarea
             label="Pitch"
             placeholder="Share your editorial angle..."
-            error="Please provide at least 20 characters."
+            error="Please provide at least 20 characters so we can share helpful context."
           />
         </article>
       </section>
