@@ -1,6 +1,14 @@
 import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { Badge, Button, Card, Input, Modal, Textarea } from "./components";
+import {
+  Badge,
+  Button,
+  Card,
+  Input,
+  Modal,
+  Textarea,
+  Tooltip
+} from "./components";
 import { tokens } from "./tokens";
 import "./styles.css";
 
@@ -25,8 +33,12 @@ export function PreviewApp() {
         <Badge variant="draft">Draft</Badge>
       </div>
       <div className="preview-actions">
-        <Button onClick={() => setModalOpen(true)}>Get started</Button>
-        <Button variant="secondary">Learn more</Button>
+        <Tooltip content="Opens publish flow">
+          <Button onClick={() => setModalOpen(true)}>Get started</Button>
+        </Tooltip>
+        <Tooltip content="Read the docs" placement="bottom">
+          <Button variant="secondary">Learn more</Button>
+        </Tooltip>
       </div>
       <Modal
         open={modalOpen}
