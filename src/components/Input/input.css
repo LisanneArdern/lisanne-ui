@@ -1,0 +1,53 @@
+.lsn-field {
+  display: grid;
+  gap: 8px;
+}
+
+.lsn-field__label {
+  font-size: 12px;
+  font-weight: var(--lsn-font-bold);
+  letter-spacing: var(--lsn-letter-label);
+  text-transform: uppercase;
+}
+
+.lsn-input {
+  width: 100%;
+  min-height: 42px;
+  border: var(--lsn-border-default) solid #121212;
+  border-radius: var(--lsn-radius-none);
+  background: transparent;
+  color: #121212;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 10px 12px;
+}
+
+.lsn-input::placeholder {
+  color: #5a5a5a;
+}
+
+.lsn-input:focus-visible {
+  outline: 2px solid #121212;
+  outline-offset: 2px;
+}
+
+.lsn-input--error {
+  border-color: #87352e;
+}
+
+.lsn-field__helper,
+.lsn-field__error {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: var(--lsn-letter-label);
+  text-transform: uppercase;
+}
+
+.lsn-field__helper {
+  color: #3b3b3b;
+}
+
+.lsn-field__error {
+  color: #87352e;
+}
