@@ -1,0 +1,59 @@
+.lsn-card {
+  display: grid;
+  gap: 14px;
+  border: var(--lsn-border-default) solid #121212;
+  border-radius: var(--lsn-radius-card);
+  background: transparent;
+  color: #121212;
+  padding: 26px 28px;
+}
+
+.lsn-card--inverted {
+  background: #121212;
+  color: #f4f4f0;
+}
+
+.lsn-card__eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: var(--lsn-letter-label);
+  font-size: 12px;
+  font-weight: var(--lsn-font-bold);
+  opacity: 0.85;
+}
+
+.lsn-card__title {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.lsn-card__description {
+  margin: 0;
+  max-width: 36ch;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: var(--lsn-font-body);
+}
+
+.lsn-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.lsn-card__tag {
+  display: inline-flex;
+  align-items: center;
+  border: var(--lsn-border-soft) solid currentColor;
+  border-radius: var(--lsn-radius-none);
+  font-size: 12px;
+  font-weight: var(--lsn-font-bold);
+  letter-spacing: var(--lsn-letter-label);
+  line-height: 1;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
