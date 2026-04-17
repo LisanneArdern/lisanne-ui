@@ -8,7 +8,8 @@ import {
   Input,
   Modal,
   Textarea,
-  Tooltip
+  Tooltip,
+  Typography
 } from "./components";
 import { tokens } from "./tokens";
 import "./styles.css";
@@ -47,14 +48,38 @@ export function PreviewApp() {
         </p>
       </header>
 
-      <PreviewSection eyebrow="Section 01" title="Buttons">
+      <PreviewSection eyebrow="Section 01" title="Typography">
+        <div className="preview-type-stack">
+          <Typography variant="display">
+            Bold type for modern products.
+          </Typography>
+          <Typography variant="headline">
+            A headline for the next feature.
+          </Typography>
+          <Typography variant="title">Section title</Typography>
+          <Typography variant="eyebrow">Eyebrow label</Typography>
+          <Typography variant="lead">
+            Lead paragraph for dense editorial layouts. Uses body weight but
+            larger size so it opens a section without competing with headlines.
+          </Typography>
+          <Typography variant="body">
+            Body copy is kept at a comfortable reading size with generous line
+            height so content feels like an editorial piece, not a UI label.
+          </Typography>
+          <Typography variant="caption">
+            Caption — small metadata or timestamps.
+          </Typography>
+        </div>
+      </PreviewSection>
+
+      <PreviewSection eyebrow="Section 02" title="Buttons">
         <div className="preview-actions">
           <Button>Get started</Button>
           <Button variant="secondary">Learn more</Button>
         </div>
       </PreviewSection>
 
-      <PreviewSection eyebrow="Section 02" title="Badges">
+      <PreviewSection eyebrow="Section 03" title="Badges">
         <div className="preview-actions">
           <Badge>New</Badge>
           <Badge variant="beta">Beta</Badge>
@@ -64,7 +89,7 @@ export function PreviewApp() {
         </div>
       </PreviewSection>
 
-      <PreviewSection eyebrow="Section 03" title="Inputs">
+      <PreviewSection eyebrow="Section 04" title="Inputs">
         <div className="preview-card-grid">
           <Input
             label="Email"
@@ -79,7 +104,7 @@ export function PreviewApp() {
         </div>
       </PreviewSection>
 
-      <PreviewSection eyebrow="Section 04" title="Card">
+      <PreviewSection eyebrow="Section 05" title="Card">
         <div className="preview-card-grid">
           <Card
             eyebrow="Project - 01"
@@ -97,7 +122,7 @@ export function PreviewApp() {
         </div>
       </PreviewSection>
 
-      <PreviewSection eyebrow="Section 05" title="Overlays">
+      <PreviewSection eyebrow="Section 06" title="Overlays">
         <div className="preview-actions">
           <Button onClick={() => setModalOpen(true)}>Open modal</Button>
           <Tooltip content="Read the docs" placement="top">

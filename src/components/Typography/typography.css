@@ -1,0 +1,60 @@
+.lsn-type {
+  margin: 0;
+  color: var(--lsn-color-foreground);
+}
+
+.lsn-type--display {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  font-size: clamp(42px, 8vw, 78px);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  font-weight: var(--lsn-font-bold);
+  max-width: 12ch;
+}
+
+.lsn-type--headline {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  font-size: clamp(30px, 4.4vw, 44px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  font-weight: var(--lsn-font-bold);
+  max-width: 22ch;
+}
+
+.lsn-type--title {
+  font-size: clamp(18px, 2.2vw, 22px);
+  line-height: 1.15;
+  letter-spacing: var(--lsn-letter-label);
+  text-transform: uppercase;
+  font-weight: var(--lsn-font-bold);
+}
+
+.lsn-type--eyebrow {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: var(--lsn-letter-label);
+  text-transform: uppercase;
+  font-weight: var(--lsn-font-bold);
+  color: var(--lsn-color-foreground-muted);
+}
+
+.lsn-type--lead {
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: var(--lsn-font-body);
+  max-width: 52ch;
+}
+
+.lsn-type--body {
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: var(--lsn-font-body);
+  max-width: 56ch;
+}
+
+.lsn-type--caption {
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: var(--lsn-font-body);
+  color: var(--lsn-color-foreground-muted);
+}
