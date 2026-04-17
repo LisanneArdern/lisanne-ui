@@ -3,6 +3,10 @@
 A bold, editorial React + TypeScript design system — sharp corners, heavy borders, uppercase labels, and inverted card patterns. Built to grow over time.
 
 [![npm version](https://img.shields.io/npm/v/lisanne-ui.svg)](https://www.npmjs.com/package/lisanne-ui)
+[![Storybook](https://img.shields.io/badge/Storybook-live-ff4785?logo=storybook&logoColor=white)](https://69e1d4397970f5ff67cabe66-otaxrsqaiz.chromatic.com/)
+
+- **npm**: <https://www.npmjs.com/package/lisanne-ui>
+- **Storybook**: <https://69e1d4397970f5ff67cabe66-otaxrsqaiz.chromatic.com/>
 
 ## Install
 
