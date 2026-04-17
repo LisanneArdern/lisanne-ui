@@ -1,11 +1,14 @@
 {
   "name": "lisanne-ui",
   "version": "0.1.0",
-  "description": "Scalable UI design system and component library",
+  "description": "Scalable, bold editorial React design system.",
   "type": "module",
   "main": "./dist/lisanne-ui.cjs",
   "module": "./dist/lisanne-ui.js",
   "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "files": [
     "dist"
   ],
@@ -14,11 +17,12 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/lisanne-ui.js",
       "require": "./dist/lisanne-ui.cjs"
-    }
+    },
+    "./styles.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -p tsconfig.build.json && vite build",
+    "build": "vite build && tsc -p tsconfig.build.json",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
@@ -27,7 +31,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -37,17 +42,18 @@
     "design-system",
     "react",
     "component-library",
-    "ui"
+    "ui",
+    "editorial"
   ],
-  "author": "",
+  "author": "Lisanne Ardern",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/LisanneArdern/lisanne-ui/issues"
   },
   "homepage": "https://github.com/LisanneArdern/lisanne-ui#readme",
-  "dependencies": {
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
@@ -66,6 +72,8 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "jsdom": "^29.0.2",
     "prettier": "^3.8.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "typescript": "^6.0.2",
     "typescript-eslint": "^8.58.2",
     "vite": "^5.4.21",
