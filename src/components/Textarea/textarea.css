@@ -1,5 +1,8 @@
+@import "../../tokens/tokens.css";
+
 .lsn-textarea {
   width: 100%;
+  font-family: var(--lsn-font-family-sans);
   border: var(--lsn-border-default) solid var(--lsn-color-foreground);
   border-radius: var(--lsn-radius-none);
   background: transparent;

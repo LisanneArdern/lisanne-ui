@@ -1,0 +1,30 @@
+:root {
+  --lsn-font-family-sans:
+    "Inter Tight", "Avenir Next", Avenir, "Segoe UI", sans-serif;
+
+  --lsn-border-default: 1.5px;
+  --lsn-border-soft: 0.5px;
+  --lsn-letter-label: 0.1em;
+  --lsn-letter-button: 0.04em;
+  --lsn-font-body: 400;
+  --lsn-font-bold: 500;
+  --lsn-radius-none: 0px;
+  --lsn-radius-card: 0px;
+
+  --lsn-color-background-page: #f2eee6;
+  --lsn-color-background-surface: #ffffff;
+  --lsn-color-background-inverted: #121212;
+
+  --lsn-color-foreground: #121212;
+  --lsn-color-foreground-muted: #3b3b3b;
+  --lsn-color-foreground-on-inverted: #f4f4f0;
+
+  --lsn-color-semantic-live-bg: #dce5d3;
+  --lsn-color-semantic-live-fg: #2b6b2d;
+  --lsn-color-semantic-deprecated-bg: #e9d7d5;
+  --lsn-color-semantic-deprecated-fg: #87352e;
+  --lsn-color-semantic-draft-bg: #e4ddcf;
+  --lsn-color-semantic-draft-fg: #6f5a1f;
+
+  --lsn-color-feedback-error: #87352e;
+}

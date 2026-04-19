@@ -1,6 +1,9 @@
+@import "../../tokens/tokens.css";
+
 .lsn-field {
   display: grid;
   gap: 8px;
+  font-family: var(--lsn-font-family-sans);
 }
 
 .lsn-field__label {

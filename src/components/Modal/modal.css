@@ -1,5 +1,8 @@
+@import "../../tokens/tokens.css";
+
 .lsn-modal {
   padding: 0;
+  font-family: var(--lsn-font-family-sans);
   border: var(--lsn-border-default) solid var(--lsn-color-foreground);
   border-radius: var(--lsn-radius-none);
   background: var(--lsn-color-background-page);

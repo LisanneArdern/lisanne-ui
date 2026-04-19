@@ -1,5 +1,8 @@
+@import "../../tokens/tokens.css";
+
 .lsn-type {
   margin: 0;
+  font-family: var(--lsn-font-family-sans);
   color: var(--lsn-color-foreground);
 }
 

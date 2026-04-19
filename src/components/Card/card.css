@@ -1,6 +1,9 @@
+@import "../../tokens/tokens.css";
+
 .lsn-card {
   display: grid;
   gap: 14px;
+  font-family: var(--lsn-font-family-sans);
   border: var(--lsn-border-default) solid #121212;
   border-radius: var(--lsn-radius-card);
   background: transparent;

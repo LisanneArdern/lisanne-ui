@@ -1,5 +1,8 @@
+@import "../../tokens/tokens.css";
+
 .lsn-button {
   box-sizing: border-box;
+  font-family: var(--lsn-font-family-sans);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +16,9 @@
   min-height: 42px;
   padding: 12px 18px;
   text-transform: uppercase;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
 }
 
 .lsn-button:disabled {
