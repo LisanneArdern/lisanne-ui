@@ -1,6 +1,5 @@
 :root {
-  --lsn-font-family-sans:
-    "Inter Tight", "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  --lsn-font-family-sans: "Inter Tight", "Avenir Next", Avenir, "Segoe UI", sans-serif;
 
   --lsn-border-default: 1.5px;
   --lsn-border-soft: 0.5px;
