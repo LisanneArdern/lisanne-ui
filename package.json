@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Scalable, bold editorial React design system.",
   "type": "module",
-  "main": "./dist/lisanne-ui.cjs",
-  "module": "./dist/lisanne-ui.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "sideEffects": [
     "**/*.css"
@@ -15,10 +15,9 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/lisanne-ui.js",
-      "require": "./dist/lisanne-ui.cjs"
+      "import": "./dist/index.js"
     },
-    "./styles.css": "./dist/style.css"
+    "./tokens.css": "./dist/tokens/tokens.css"
   },
   "scripts": {
     "dev": "vite",
@@ -65,6 +64,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.7.0",
@@ -80,6 +80,7 @@
     "typescript": "^6.0.2",
     "typescript-eslint": "^8.58.2",
     "vite": "^5.4.21",
+    "vite-plugin-lib-inject-css": "^2.2.2",
     "vitest": "^4.1.4"
   }
 }
