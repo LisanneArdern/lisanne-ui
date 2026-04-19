@@ -14,12 +14,8 @@ describe("Card", () => {
     );
 
     expect(screen.getByText("Project - 01")).toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", { name: "Design system audit" })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("Rebuilt token architecture for a product team of 12.")
-    ).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Design system audit" })).toBeInTheDocument();
+    expect(screen.getByText("Rebuilt token architecture for a product team of 12.")).toBeInTheDocument();
     expect(screen.getByText("React")).toBeInTheDocument();
   });
 

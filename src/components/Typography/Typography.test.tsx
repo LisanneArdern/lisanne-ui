@@ -5,9 +5,7 @@ import { Typography } from "./Typography";
 describe("Typography", () => {
   it("renders a display variant as an h1 by default", () => {
     render(<Typography variant="display">Hello</Typography>);
-    expect(
-      screen.getByRole("heading", { level: 1, name: "Hello" })
-    ).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 1, name: "Hello" })).toBeInTheDocument();
   });
 
   it("allows overriding the rendered element via `as`", () => {
