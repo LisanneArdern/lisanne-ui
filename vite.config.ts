@@ -22,9 +22,36 @@ function emitTokensCss(): Plugin {
   };
 }
 
+/** Remove Vite's "empty css" placeholder comments from final JS (runs after lib inject + CSS extraction). */
+function stripEmptyCssPlaceholder(): Plugin {
+  const emptyCssComment = /\/\* empty css[\s\S]*?\*\//g;
+  return {
+    name: "strip-empty-css-placeholder",
+    enforce: "post",
+    generateBundle(_options, bundle) {
+      for (const fileName of Object.keys(bundle)) {
+        const chunk = bundle[fileName];
+        if (
+          chunk.type === "chunk" &&
+          fileName.endsWith(".js") &&
+          chunk.code.includes("empty css")
+        ) {
+          chunk.code = chunk.code.replace(emptyCssComment, "");
+        }
+      }
+    }
+  };
+}
+
 export default defineConfig({
-  plugins: [react(), libInjectCss(), emitTokensCss()],
+  plugins: [
+    react(),
+    libInjectCss(),
+    emitTokensCss(),
+    stripEmptyCssPlaceholder()
+  ],
   build: {
+    sourcemap: "hidden",
     cssCodeSplit: true,
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
