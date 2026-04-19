@@ -20,7 +20,8 @@ export function Input({
   const inputId = id ?? generatedId;
   const helperId = helperText ? `${inputId}-helper` : undefined;
   const errorId = error ? `${inputId}-error` : undefined;
-  const describedBy = [helperId, errorId].filter(Boolean).join(" ") || undefined;
+  const describedBy =
+    [helperId, errorId].filter(Boolean).join(" ") || undefined;
 
   const inputClasses = ["lsn-input", error ? "lsn-input--error" : "", className]
     .filter(Boolean)

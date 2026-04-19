@@ -30,7 +30,9 @@ export function Card({
     <article className={classes} {...rest}>
       {eyebrow ? <p className="lsn-card__eyebrow">{eyebrow}</p> : null}
       {title ? <h3 className="lsn-card__title">{title}</h3> : null}
-      {description ? <p className="lsn-card__description">{description}</p> : null}
+      {description ? (
+        <p className="lsn-card__description">{description}</p>
+      ) : null}
       {tags?.length ? (
         <div className="lsn-card__tags" aria-label="Card tags">
           {tags.map((tag) => (

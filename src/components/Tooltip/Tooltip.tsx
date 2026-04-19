@@ -1,9 +1,4 @@
-import {
-  cloneElement,
-  isValidElement,
-  useId,
-  useState
-} from "react";
+import { cloneElement, isValidElement, useId, useState } from "react";
 import type { ReactElement, ReactNode } from "react";
 import "./tooltip.css";
 

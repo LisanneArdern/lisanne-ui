@@ -49,12 +49,7 @@ describe("Modal", () => {
 
   it("hides the close button when not dismissible", () => {
     render(
-      <Modal
-        open
-        onClose={() => {}}
-        title="Confirm"
-        dismissible={false}
-      />
+      <Modal open onClose={() => {}} title="Confirm" dismissible={false} />
     );
 
     expect(screen.queryByRole("button", { name: "Close dialog" })).toBeNull();

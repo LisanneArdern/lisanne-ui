@@ -21,7 +21,8 @@ export function Textarea({
   const textareaId = id ?? generatedId;
   const helperId = helperText ? `${textareaId}-helper` : undefined;
   const errorId = error ? `${textareaId}-error` : undefined;
-  const describedBy = [helperId, errorId].filter(Boolean).join(" ") || undefined;
+  const describedBy =
+    [helperId, errorId].filter(Boolean).join(" ") || undefined;
 
   const textareaClasses = [
     "lsn-textarea",
